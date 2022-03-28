@@ -10,7 +10,7 @@
  */
 class Solution {
     
-    //METHOD-2
+    //METHOD-1
     /*
     naive approach:
     pick last node, put in front and do this k-times
@@ -26,8 +26,8 @@ class Solution {
         return 1 + length(head.next);
     }
     
-    //METHOD-1
-     //time: O(n), space: O(n)
+    //METHOD-2
+     //time: O(n), space: O(1)
     public ListNode rotateRight(ListNode head, int k) {
         if(k == 0 || head == null || head.next == null)
             return head;
@@ -56,8 +56,8 @@ class Solution {
         return new_head;
     }
     
-    //METHOD-2
-     //time: O(n), space: O(n)
+    //METHOD-3
+     //time: O(n), space: O(1)
     /*
     Connect last node to head and make it circular-list, traverse from head (len - k%len) times and return that pointed node.
     */
